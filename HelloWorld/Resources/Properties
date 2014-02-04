@@ -1,0 +1,2 @@
+ognl.inlineBindings=true
+ognl.helperFunctions=true
