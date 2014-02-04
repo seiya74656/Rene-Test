@@ -3,16 +3,17 @@ package com.ksroom;
 
 import com.webobjects.foundation.NSLog;
 
-import com.webobjects.appserver.WOApplication;
+import er.extensions.appserver.ERXApplication;
 
-public class Application extends WOApplication {
-	public static void main(String[] argv) {
-		WOApplication.main(argv, Application.class);
-	}
+public class Application extends ERXApplication {
 
-	public Application() {
-		NSLog.out.appendln("Welcome to " + name() + " !");
-		/* ** put your initialization code in here ** */
-		setAllowsConcurrentRequestHandling(true);
-	}
+  public static void main(String[] argv) {
+    ERXApplication.main(argv, Application.class);
+  }
+
+  public Application() {
+    NSLog.out.appendln("Welcome to " + name() + " !");
+    /* ** put your initialization code in here ** */
+    setAllowsConcurrentRequestHandling(true);
+  }
 }
