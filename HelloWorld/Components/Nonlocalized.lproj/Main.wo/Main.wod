@@ -1,3 +1,12 @@
 Sample : WOString {
 	value = myTextForDisplay;
 }
+
+hi : WOHyperlink {
+action = sayHi;
+targetx = "_blank";
+}
+
+appname : WOString {
+	value = Applikation;
+}

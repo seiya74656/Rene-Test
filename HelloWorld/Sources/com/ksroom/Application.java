@@ -11,6 +11,8 @@ public class Application extends ERXApplication {
     ERXApplication.main(argv, Application.class);
   }
 
+  
+  
   public Application() {
     NSLog.out.appendln("Welcome to " + name() + " !");
     /* ** put your initialization code in here ** */
