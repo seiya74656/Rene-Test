@@ -12,5 +12,5 @@ targetx = "_blank";
 }
 
 appname : WOString {
-	value = application;
+	value = application.name;
 }
