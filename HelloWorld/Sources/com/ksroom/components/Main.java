@@ -41,7 +41,6 @@ public class Main extends ERXComponent {
   public WOApplication getApplikation() {
 	  return application();	  
   }
-
   /**
    * @return the now
    */
