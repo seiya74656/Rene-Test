@@ -6,6 +6,7 @@ import com.webobjects.foundation.NSLog;
 import er.extensions.appserver.ERXApplication;
 
 public class Application extends ERXApplication {
+	private int mainPageCounter;
 
   public static void main(String[] argv) {
     ERXApplication.main(argv, Application.class);
@@ -17,5 +18,16 @@ public class Application extends ERXApplication {
     NSLog.out.appendln("Welcome to " + name() + " !");
     /* ** put your initialization code in here ** */
     setAllowsConcurrentRequestHandling(true);
+    
+    mainPageCounter = 0;
   }
+
+  public int mainPageCounter() {
+	  return mainPageCounter;
+  }
+  
+  public void incrementMainPageCounter() {
+	  mainPageCounter++;
+  }
+
 }

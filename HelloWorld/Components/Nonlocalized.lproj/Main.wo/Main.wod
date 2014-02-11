@@ -2,6 +2,10 @@ Sample : WOString {
 	value = myTextForDisplay;
 }
 
+maincount : WOString {
+	value = application.mainPageCounter;
+}
+
 hi : WOHyperlink {
 action = sayHi;
 targetx = "_blank";
