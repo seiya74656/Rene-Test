@@ -39,9 +39,6 @@ public class Main extends ERXComponent {
 			  return nextPage;
   }
 
-  public WOApplication getApplikation() {
-	  return application();	  
-  }
   /**
    * @return the now
    */
