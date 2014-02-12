@@ -36,6 +36,9 @@ public class Main extends ERXComponent {
 
   public Welcome sayHi() {
 	  Welcome nextPage = pageWithName(Welcome.class);
+	  
+	  // meine änderung
+	  
 			  return nextPage;
   }
 
