@@ -2,11 +2,19 @@
 package com.ksroom.components;
 
 import com.ksroom.Application;
-import com.webobjects.appserver.WOApplication;
+import com.ksroom.Session;
 import com.webobjects.appserver.WOContext;
+import com.webobjects.appserver.WOSession;
+import com.webobjects.foundation.NSArray;
+import com.webobjects.foundation.NSDictionary;
+import com.webobjects.foundation.NSMutableArray;
+import com.webobjects.foundation.NSMutableDictionary;
 import com.webobjects.foundation.NSTimestamp;
 
+import er.extensions.appserver.ERXApplication;
+import er.extensions.appserver.ERXSession;
 import er.extensions.components.ERXComponent;
+import er.extensions.foundation.ERXTimestampUtilities;
 
 public class Main extends ERXComponent {
   private static final long serialVersionUID = 1L;
@@ -15,8 +23,23 @@ public class Main extends ERXComponent {
   public Main(WOContext context) {
     super(context);
     
-    Application application = 
-    		(Application)Application.application();
+   // Application application = (Application) Application.application();
+    
+    Application application = (Application) ERXApplication.application();
+
+    Session session = (Session) ERXSession.session();
+    
+    
+    //NSArray
+//    NSMutableArray
+//  NSDictionary  
+//  NSMutableDictionary  
+    
+   // Application application = 
+    //		(Application)Application.application();
+    
+    
+    
     application.incrementMainPageCounter();
     
     for (String aKey : context.request().headerKeys()) {
@@ -53,7 +76,13 @@ public class Main extends ERXComponent {
    * @return the tomorrow
    */
   public NSTimestamp tomorrow() {
-    return new NSTimestamp();
+    return now().timestampByAddingGregorianUnits(0, 0, 1, 0, 0, 0);
   }
 
+  public NSTimestamp tomorrow2() {
+	  return ERXTimestampUtilities.tomorrow();
+	  }
+ 
+  
+  
 }
