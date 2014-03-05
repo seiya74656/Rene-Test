@@ -14,3 +14,7 @@ targetx = "_blank";
 appname : WOString {
 	value = application.name;
 }
+
+hi2 : WOHyperlink {
+	action = sayHi2;
+}

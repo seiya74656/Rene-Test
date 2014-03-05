@@ -65,6 +65,15 @@ public class Main extends ERXComponent {
 			  return nextPage;
   }
 
+  public Welcome2 sayHi2() {
+	  Welcome2 nextPage = pageWithName(Welcome2.class);
+	  
+	  // meine änderung
+	  
+			  return nextPage;
+  }
+
+  
   /**
    * @return the now
    */
