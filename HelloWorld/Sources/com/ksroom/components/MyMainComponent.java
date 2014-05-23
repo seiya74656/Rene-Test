@@ -33,7 +33,7 @@ public class MyMainComponent extends ERXComponent {
     printCode(y);
 
 
-    System.err.println(y.name()); // --> Yellow
+//    System.err.println(y.name()); // --> Yellow
 
 
     ETBFEuropeanUnion eu = ETBFEuropeanUnion.NO;

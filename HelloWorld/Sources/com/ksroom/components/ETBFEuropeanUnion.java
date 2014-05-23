@@ -1,8 +1,5 @@
 package com.ksroom.components;
 
-import org.treasureboat.foundation.enums.iface.ITBFLocalizable;
-import org.treasureboat.foundation.enums.iface.ITBFVersion;
-
 import com.webobjects.foundation.NSKeyValueCodingAdditions;
 
 /**
