@@ -1,0 +1,12 @@
+FORM : WOForm {
+	action = doSomething;
+}
+
+SUBMIT : WOSubmitButton {
+	action = doSomething;
+	value = "click me";
+}
+
+TEXTFIELD : WOTextField {
+	value = scanner;
+}
