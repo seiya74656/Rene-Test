@@ -58,6 +58,8 @@ public class Welcome extends MyMainComponent {
 
   public Welcome(WOContext context) {
     super(context);
+    
+//    System.err.println(context + "Context!!");
 
 
 
@@ -69,7 +71,7 @@ public class Welcome extends MyMainComponent {
 
     sampleProtectedString = "xx";
 
-    setSampleString("YYYY");
+    setSampleString(sampleWhateverString);
 
     System.err.println(sampleString());
 

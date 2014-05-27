@@ -5,6 +5,7 @@ import com.webobjects.appserver.WOContext;
 import er.extensions.components.ERXComponent;
 
 public class MyMainComponent extends ERXComponent {
+	  private static final long serialVersionUID = 1L;
 
   /* o : this belongs to CLASS : MyMainComponent */
   public static String sampleStaticPublicString = "12";
