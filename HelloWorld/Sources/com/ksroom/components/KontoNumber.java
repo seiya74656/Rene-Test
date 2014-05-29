@@ -4,6 +4,9 @@ import com.webobjects.appserver.WOActionResults;
 import com.webobjects.appserver.WOContext;
 import er.extensions.components.ERXComponent;
 
+// next time I have to show you
+// javadoc, todo, fix, eclipse codes, dash, log
+
 public class KontoNumber extends ERXComponent {
   /**
    * Do I need to update serialVersionUID?
