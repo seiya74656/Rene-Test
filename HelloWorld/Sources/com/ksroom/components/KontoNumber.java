@@ -12,9 +12,9 @@ public class KontoNumber extends ERXComponent {
    */
   private static final long serialVersionUID = 1L;
 
-  
-  
-
+  //********************************************************************
+  //  Constructor : コンストラクタ
+  //********************************************************************
 	  
   public KontoNumber(WOContext aContext) {
     super(aContext);
@@ -42,7 +42,7 @@ public void setKontonummer(String kontonummer) {
 /**
  * @return the kontonummer
  */
-public String Kontonummer() {
+public String kontonummer() {
 	System.err.println("String Kontonummer");
 	return kontonummer;
 }
