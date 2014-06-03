@@ -1,5 +1,8 @@
 package com.ksroom.components;
 
+import java.util.Formatter;
+
+import com.sun.org.apache.xpath.internal.operations.Equals;
 import com.webobjects.appserver.WOActionResults;
 import com.webobjects.appserver.WOContext;
 import er.extensions.components.ERXComponent;
@@ -14,7 +17,6 @@ public class KontoNumber extends ERXComponent {
    * <a href="http://java.sun.com/j2se/1.4/pdf/serial-spec.pdf">Java Object Serialization Spec</a>
    */
   private static final long serialVersionUID = 1L;
-
   //********************************************************************
   //  Constructor : コンストラクタ
   //********************************************************************
@@ -26,30 +28,60 @@ public class KontoNumber extends ERXComponent {
   }
 
 
-  public WOActionResults doSomething() {
-///    System.out.println("--> I am doing something : " + kontonummer() + sampleString());
-
+  public WOActionResults doSomething() { 
+	  kontostandalt = kontostand; //Setzt den Kontostandalt wert noch auf den unveränderten Kontostand nach einzahlung
+	  kontostand = einzahlen + kontostand; //Führt die Kontostand einzahlung durch.
+	  
+///    System.out.println("--> I am doing something : " + einzahlen() + sampleString());
     return null;
   }
 
 
 
 /**
- * @param kontonummer the kontonummer to set
+ * @param einzahlen the einzahlen to set
  */
-public void setKontonummer(String kontonummer) {
-	System.err.println("setKontonummer");
-	this.kontonummer = kontonummer;
+public void setEinzahlen(float einzalen) {
+	this.einzahlen = einzahlen;
 }
 
 /**
- * @return the kontonummer
+ * @return the einzahlen
  */
-public String kontonummer() {
-	System.err.println("String Kontonummer");
-	return kontonummer;
+public float getEinzahlen() {
+//	System.err.println("Int Einzahlen");
+	return einzahlen;
 }
   
-private String kontonummer;
+public float einzahlen;
+
+
+// Selbe wie Kontonummer, nur mit Kontostand als float
+
+public void setKontostand(float kontostand) {
+	this.kontostand = kontostand;
+	}
+
+public float getKontostand()
+{
+  return kontostand;
+}
+
+public float kontostand = 999.0f; /// 999 Anfangswert wenn Programmgestartet wird.
+
+
+//Selbe wie Kontostand, nur mit altem wert
+
+public void setKontostandalt(float kontostandalt) {
+	if (kontostandalt == 0.0f) kontostandalt = kontostand; // Soll wenn noch keine Einzahlung getätigt wurde auf den Anfagswert 999 stellen.
+	this.kontostandalt = kontostandalt + 1f;
+	}
+
+public float getKontostandalt()
+{
+return kontostandalt;
+}
+
+public float kontostandalt; 
 
 }

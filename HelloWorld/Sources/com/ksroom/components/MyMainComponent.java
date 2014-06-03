@@ -48,7 +48,7 @@ public class MyMainComponent extends ERXComponent {
     } else {
 
       System.err.println(e);
-    }
+    } 
   }
 
 

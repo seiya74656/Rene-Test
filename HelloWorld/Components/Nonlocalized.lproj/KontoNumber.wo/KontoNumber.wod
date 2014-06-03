@@ -5,9 +5,9 @@ FORM : WOForm {
 
 SUBMIT : WOSubmitButton {
 	action = doSomething;
-	value = "click me";
+	value = "Einzahlen";
 }
 
 TEXTFIELD : WOTextField {
-	value = kontonummer;
+	value = einzahlen;
 }
