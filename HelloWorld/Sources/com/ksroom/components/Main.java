@@ -57,7 +57,7 @@ public class Main extends ERXComponent {
     return myTextForDisplay;
   }
 
-  public Welcome sayHi() {
+  public Welcome kontoAbfrage() {
 	  Welcome nextPage = pageWithName(Welcome.class);
 	  // meine änderung
 	  

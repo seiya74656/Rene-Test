@@ -7,7 +7,7 @@ maincount : WOString {
 }
 
 hi : WOHyperlink {
-action = sayHi;
+action = kontoAbfrage;
 targetx = "_blank";
 }
 
