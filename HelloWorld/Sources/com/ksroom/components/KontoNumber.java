@@ -41,7 +41,7 @@ public class KontoNumber extends ERXComponent {
 /**
  * @param einzahlen the einzahlen to set
  */
-public void setEinzahlen(float einzalen) {
+public void setEinzahlen(float einzahlen) {
 	this.einzahlen = einzahlen;
 }
 
@@ -49,7 +49,7 @@ public void setEinzahlen(float einzalen) {
  * @return the einzahlen
  */
 public float getEinzahlen() {
-//	System.err.println("Int Einzahlen");
+	System.err.println("Int Einzahlen");
 	return einzahlen;
 }
   
@@ -76,6 +76,7 @@ public void setKontostandalt(float kontostandalt) {
 	if (kontostandalt == 0.0f) kontostandalt = kontostand; // Soll wenn noch keine Einzahlung getätigt wurde auf den Anfagswert 999 stellen.
 	this.kontostandalt = kontostandalt + 1f;
 	}
+
 
 public float getKontostandalt()
 {
