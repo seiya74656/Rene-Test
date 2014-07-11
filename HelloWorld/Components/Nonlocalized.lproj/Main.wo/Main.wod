@@ -7,8 +7,8 @@ maincount : WOString {
 }
 
 hi : WOHyperlink {
-action = kontoAbfrage;
-targetx = "_blank";
+	action = kontoAbfrage;
+	targetx = "_blank";
 }
 
 appname : WOString {
@@ -24,5 +24,6 @@ hi3 : WOString {
 }
 
 logout : WOHyperlink {
-	action = logout;
+	//action = logout;
+	directActionName = "logout";
 }

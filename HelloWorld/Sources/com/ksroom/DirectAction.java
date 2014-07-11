@@ -16,4 +16,18 @@ public class DirectAction extends ERXDirectAction {
   public WOActionResults defaultAction() {
     return pageWithName(Main.class.getName());
   }
+  
+  public WOActionResults logoutAction() {
+    
+    session().terminate();
+    
+    return defaultAction();
+  }
+  
+  
+  
+  
+  
+  
+  
 }
