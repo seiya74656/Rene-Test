@@ -85,4 +85,9 @@ return kontostandalt;
 
 public float kontostandalt; 
 
+public Welcome auszahlen() {
+	  Welcome nextPage = pageWithName(Welcome.class);
+	  return nextPage;
+}
+
 }

@@ -11,3 +11,7 @@ SUBMIT : WOSubmitButton {
 TEXTFIELD : WOTextField {
 	value = einzahlen;
 }
+
+hi3 : WOHyperlink {
+	action = auszahlen;
+}
