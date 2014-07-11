@@ -18,3 +18,7 @@ appname : WOString {
 hi2 : WOHyperlink {
 	action = sayHi2;
 }
+
+hi3 : WOString {
+	value = currentTime;
+}

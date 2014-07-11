@@ -76,6 +76,10 @@ public class Main extends ERXComponent {
 			  return nextPage;
   }
 
+  public NSTimestamp currentTime() {
+	  
+	  return new NSTimestamp();
+  }
   
   /**
    * @return the now
