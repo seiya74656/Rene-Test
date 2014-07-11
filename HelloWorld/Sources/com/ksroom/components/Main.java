@@ -99,6 +99,11 @@ public class Main extends ERXComponent {
 	  return ERXTimestampUtilities.tomorrow();
 	  }
  
-  
+  public Main logout() {
+	  session().terminate();
+	  Main nextPage = pageWithName(Main.class);
+	  return nextPage;
+	  
+  }
   
 }

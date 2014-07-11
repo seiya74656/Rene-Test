@@ -22,3 +22,7 @@ hi2 : WOHyperlink {
 hi3 : WOString {
 	value = currentTime;
 }
+
+logout : WOHyperlink {
+	action = logout;
+}
