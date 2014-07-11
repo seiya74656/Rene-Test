@@ -1,10 +1,9 @@
 package com.ksroom.components;
 
-import java.util.Formatter;
-
-import com.sun.org.apache.xpath.internal.operations.Equals;
+import com.ksroom.MyHelperClass;
 import com.webobjects.appserver.WOActionResults;
 import com.webobjects.appserver.WOContext;
+
 import er.extensions.components.ERXComponent;
 
 // next time I have to show you
@@ -20,74 +19,109 @@ public class KontoNumber extends ERXComponent {
   //********************************************************************
   //  Constructor : コンストラクタ
   //********************************************************************
-	  
+
   public KontoNumber(WOContext aContext) {
     super(aContext);
-	System.err.println("Kontonummer Constructor");
+    System.err.println("Kontonummer Constructor");
 
   }
 
 
   public WOActionResults doSomething() { 
-	  kontostandalt = kontostand; //Setzt den Kontostandalt wert noch auf den unveränderten Kontostand nach einzahlung
-	  kontostand = einzahlen + kontostand; //Führt die Kontostand einzahlung durch.
-	  
-///    System.out.println("--> I am doing something : " + einzahlen() + sampleString());
+    kontostandalt = kontostand; //Setzt den Kontostandalt wert noch auf den unveränderten Kontostand nach einzahlung
+    kontostand = einzahlen + kontostand; //Führt die Kontostand einzahlung durch.
+
+    ///    System.out.println("--> I am doing something : " + einzahlen() + sampleString());
     return null;
   }
 
 
 
-/**
- * @param einzahlen the einzahlen to set
- */
-public void setEinzahlen(float einzahlen) {
-	this.einzahlen = einzahlen;
-}
-
-/**
- * @return the einzahlen
- */
-public float getEinzahlen() {
-	System.err.println("Int Einzahlen");
-	return einzahlen;
-}
   
-public float einzahlen;
+  public String sampleText1 = null;
+  public String sampleText2 = "<strong>Hello World!</strong>";
 
 
-// Selbe wie Kontonummer, nur mit Kontostand als float
-
-public void setKontostand(float kontostand) {
-	this.kontostand = kontostand;
-	}
-
-public float getKontostand()
-{
-  return kontostand;
-}
-
-public float kontostand = 999.0f; /// 999 Anfangswert wenn Programmgestartet wird.
 
 
-//Selbe wie Kontostand, nur mit altem wert
+  //  public void setEinzahlenZwei(String einzahlenZwei) {
+  //    this.einzahlenZwei = Float.valueOf(einzahlenZwei);
+  //  }
+  //  public String getEinzahlenZwei() {
+  //    return String.valueOf(einzahlenZwei);
+  //  }
+  //  public float einzahlenZwei;
 
-public void setKontostandalt(float kontostandalt) {
-	if (kontostandalt == 0.0f) kontostandalt = kontostand; // Soll wenn noch keine Einzahlung getätigt wurde auf den Anfagswert 999 stellen.
-	this.kontostandalt = kontostandalt + 1f;
-	}
 
 
-public float getKontostandalt()
-{
-return kontostandalt;
-}
 
-public float kontostandalt; 
 
-public Welcome auszahlen() {
-	  Welcome nextPage = pageWithName(Welcome.class);
-	  return nextPage;
-}
+
+
+
+  /**
+   * @param einzahlen the einzahlen to set
+   */
+  public void setEinzahlen(float einzahlen) {
+    this.einzahlen = einzahlen;
+  }
+
+  /**
+   * @return the einzahlen
+   */
+  public float einzahlen() {
+    // TODO please check
+    System.err.println("Int Einzahlen = " + MyHelperClass.stringWithNtimesString(3, "Hallo"));
+    return einzahlen;
+  }
+
+  public float einzahlen;
+
+
+  
+  
+  
+  
+  // Selbe wie Kontonummer, nur mit Kontostand als float
+
+  public void setKontostand(float kontostand) {
+    this.kontostand = kontostand;
+  }
+
+  /**
+   * 
+   * @return
+   */
+  public float getKontostand() 
+  {
+    return kontostand;
+  }
+
+  public float kontostand = 999.0f; /// FIXME 999 Anfangswert wenn Programmgestartet wird.
+
+
+  //Selbe wie Kontostand, nur mit altem wert
+
+  /**
+   * 
+   * @param kontostandalt
+   */
+  public void setKontostandalt(float kontostandalt) {
+    if (kontostandalt == 0.0f) kontostandalt = kontostand; // Soll wenn noch keine Einzahlung getätigt wurde auf den Anfagswert 999 stellen.
+    this.kontostandalt = kontostandalt + 1f;
+  }
+
+
+  public float getKontostandalt()
+  {
+    return kontostandalt;
+  }
+
+  public float kontostandalt; 
+
+  public Welcome auszahlen() {
+    Welcome nextPage = pageWithName(Welcome.class);
+    return nextPage;
+  }
 
 }
