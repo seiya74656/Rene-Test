@@ -10,6 +10,7 @@ SUBMIT : WOSubmitButton {
 
 TEXTFIELD : WOTextField {
 	value = einzahlen;
+	numberformat = "#,##0";
 }
 
 hi3 : WOHyperlink {
